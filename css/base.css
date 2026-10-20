@@ -77,20 +77,25 @@ ul, ol {
 .reveal-delay-4 { transition-delay: 400ms; }
 .reveal-delay-5 { transition-delay: 500ms; }
 
-/* ─── Custom Scrollbar ─── */
+/* ─── Custom Scrollbar (Garis Putih Dihilangkan / Transparent Track) ─── */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(20, 23, 22, 0.25) transparent;
+}
+
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-parchment);
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-stone-light);
-  border-radius: 0;
+  background: rgba(20, 23, 22, 0.25);
+  border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-stone);
+  background: rgba(20, 23, 22, 0.5);
 }
