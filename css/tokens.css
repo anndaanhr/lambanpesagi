@@ -1,0 +1,80 @@
+/* ═══════════════════════════════════════════════════════
+   DESIGN TOKENS — Lamban Pesagi Cultural Architecture
+   Theme: "Highland Basalt & Robusta Timber"
+   ═══════════════════════════════════════════════════════ */
+
+:root {
+  /* ─── Color Palette (Cool Mist, Volcanic Basalt, Robusta Timber, Highland Pine) ─── */
+  --color-parchment:       #F5F6F5; /* Cool Highland Alabaster */
+  --color-warm-cream:      #EAECEA; /* Subtle Mountain Stone Wash */
+  --color-charred-teak:    #141716; /* Volcanic Basalt / Deep Obsidian */
+  --color-terracotta:      #8E4A23; /* Roasted Robusta Timber */
+  --color-terracotta-dark: #6D3414; /* Deep Roasted Bark */
+  --color-brass:           #2C4636; /* Highland Mountain Pine */
+  --color-brass-light:     #D6973D; /* Mountain Amber / Raw Rattan */
+  --color-moss:            #2C4636; /* Evergreen Forest */
+  --color-moss-light:      #3B5B47;
+  --color-stone:           #667069; /* Cool Highland Slate */
+  --color-stone-light:     #98A29B;
+  --color-hairline:        rgba(20, 23, 22, 0.12);
+  --color-hairline-light:  rgba(245, 246, 245, 0.16);
+  --color-overlay:         rgba(20, 23, 22, 0.65);
+  --color-overlay-heavy:   rgba(20, 23, 22, 0.85);
+
+  /* ─── Typography Stack: Syne + DM Sans + IBM Plex Mono ─── */
+  --font-display:    'Syne', sans-serif;
+  --font-body:       'DM Sans', -apple-system, sans-serif;
+  --font-mono:       'IBM Plex Mono', 'Consolas', monospace;
+
+  --text-xs:    0.75rem;    /* 12px */
+  --text-sm:    0.875rem;   /* 14px */
+  --text-base:  1rem;       /* 16px */
+  --text-lg:    1.125rem;   /* 18px */
+  --text-xl:    1.333rem;   /* ~21px */
+  --text-2xl:   1.777rem;   /* ~28px */
+  --text-3xl:   2.369rem;   /* ~38px */
+  --text-4xl:   3.157rem;   /* ~50px */
+  --text-5xl:   4.209rem;   /* ~67px */
+
+  --leading-tight:   1.15;
+  --leading-snug:    1.3;
+  --leading-normal:  1.6;
+  --leading-relaxed: 1.75;
+
+  --tracking-tight:   -0.03em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.04em;
+  --tracking-wider:   0.08em;
+
+  /* ─── Spacing (8px rhythm) ─── */
+  --space-1:   0.25rem;   /* 4px */
+  --space-2:   0.5rem;    /* 8px */
+  --space-3:   0.75rem;   /* 12px */
+  --space-4:   1rem;      /* 16px */
+  --space-5:   1.5rem;    /* 24px */
+  --space-6:   2rem;      /* 32px */
+  --space-8:   3rem;      /* 48px */
+  --space-10:  4rem;      /* 64px */
+  --space-12:  6rem;      /* 96px */
+  --space-16:  8rem;      /* 128px */
+
+  /* ─── Layout ─── */
+  --max-width:    1200px;
+  --gutter:       var(--space-5);
+  --border-thin:  1px solid var(--color-hairline);
+  --border-dark:  1px solid var(--color-hairline-light);
+  --radius-none:  0px;
+  --radius-sm:    2px;
+
+  /* ─── Transitions ─── */
+  --ease-out:      cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out:   cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast:  180ms;
+  --duration-base:  350ms;
+  --duration-slow:  600ms;
+
+  /* ─── Shadows ─── */
+  --shadow-subtle:  0 1px 3px rgba(20, 23, 22, 0.05);
+  --shadow-card:    0 2px 8px rgba(20, 23, 22, 0.08);
+  --shadow-elevated: 0 8px 24px rgba(20, 23, 22, 0.12);
+}

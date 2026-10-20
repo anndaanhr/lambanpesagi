@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Lamban Pesagi — Arsitektur Vernakular Lampung Barat</title>
+  <meta name="description" content="Kajian dan dokumentasi arsitektur vernakular Lamban Pesagi di Pekon Kenali, Belalau, Lampung Barat. Cagar Budaya Nasional dan Warisan Budaya Takbenda Indonesia.">
+  <meta name="keywords" content="Lamban Pesagi, Rumah Adat Lampung, Arsitektur Vernakular, Pekon Kenali, Belalau, Lampung Barat, Sai Batin, Cagar Budaya">
+  <meta name="author" content="Pokdarwis Pekon Kenali">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lamban Pesagi — Arsitektur Vernakular Lampung Barat">
+  <meta property="og:description" content="Arsitektur vernakular kayu tanpa paku masyarakat Sai Batin Lampung Barat.">
+  <meta property="og:image" content="assets/images/hero-lamban-pesagi.jpg">
+
+  <!-- Google Fonts: Syne (Display), DM Sans (Body), IBM Plex Mono (Technical) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=IBM+Plex+Mono:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Modular CSS Architecture -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       NAVIGATION
+       ═══════════════════════════════════════════════════════ -->
+  <header class="nav" id="main-nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__brand">
+        LAMBAN<span>PESAGI</span>
+      </a>
+
+      <button class="nav__menu-btn" aria-label="Buka Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav__links">
+        <a href="#sejarah" class="nav__link">Sejarah</a>
+        <a href="#anatomi" class="nav__link">Anatomi</a>
+        <a href="#sambungan" class="nav__link">Konstruksi</a>
+        <a href="#denah" class="nav__link">Tata Ruang</a>
+        <a href="#ekosistem" class="nav__link">Kawasan</a>
+        <a href="#panduan" class="nav__link">Panduan Kunjungan</a>
+      </nav>
+    </div>
+  </header>
+  <div class="nav__backdrop" id="nav-backdrop" aria-hidden="true"></div>
+
+  <main>
+    <!-- ═══════════════════════════════════════════════════════
+         SEKSI 1: HERO
+         ═══════════════════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+      <div class="hero__bg">
+        <img src="assets/images/hero-lamban-pesagi.jpg" alt="Rumah Adat Lamban Pesagi di Pekon Kenali" width="1280" height="853" loading="eager">
+        <div class="hero__overlay"></div>
+      </div>
+
+      <div class="hero__content reveal">
+        <div class="hero__overline">PEKON KENALI / LAMPUNG BARAT</div>
+        <h1 class="hero__title">LAMBAN PESAGI</h1>
+        <p class="hero__subtitle">
+          Arsitektur vernakular kayu masyarakat adat Sai Batin. Rumah panggung tahan gempa berusia ratusan tahun yang berdiri kokoh tanpa paku pabrikan.
+        </p>
+
+        <!-- Cagar Budaya & WBTb Badges -->
+        <div class="hero__badges">
+          <div class="badge">
+            <span class="badge__code">CAGAR BUDAYA</span>
+            <span>UU 5/1992 INV. 397.04.06.05</span>
+          </div>
+          <div class="badge">
+            <span class="badge__code">WBTB INDONESIA</span>
+            <span>SK KEMENDIKBUD 270/P/2014</span>
+          </div>
+        </div>
+
+        <div class="hero__location">
+          Kecamatan Belalau, Kabupaten Lampung Barat
+        </div>
+
+        <div class="hero__actions">
+          <a href="#anatomi" class="btn btn--primary">Eksplorasi Struktur</a>
+          <a href="#panduan" class="btn btn--outline" style="color: var(--color-parchment); border-color: rgba(245,246,245,0.35);">Panduan Adat & Kunjungan</a>
+        </div>
+
+        <a href="#sejarah" class="hero__scroll-cue" style="text-decoration: none;">
+          Gulir untuk eksplorasi ↓
+        </a>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SEKSI 2: SEJARAH & IDENTITAS
+         ═══════════════════════════════════════════════════════ -->
+    <section class="section" id="sejarah">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-number">// 01</span>
+          <span class="overline">SEJARAH & IDENTITAS</span>
+          <h2 class="h2">Rumah Persegi Penjaga Riwayat Sekala Brak</h2>
+        </div>
+
+        <div class="grid-split grid-split--60-40">
+          <div class="reveal">
+            <p class="intro__lead">
+              Secara etimologi, <em>Lamban</em> bermakna <strong>rumah</strong> dan <em>Pesagi</em> bermakna <strong>persegi atau presisi</strong>, merujuk pada denah bujur sangkar simetris yang menjadi identitas arsitekturnya.
+            </p>
+            <p class="body-md" style="margin-bottom: var(--space-4); color: var(--color-stone);">
+              Terletak di Pekon Kenali, Belalau, Lamban Pesagi berdiri di kawasan dataran tinggi lingkar Gunung Pesagi (2.262 mdpl), pusat persebaran peradaban Kerajaan Sekala Brak kuno dan titik awal silsilah masyarakat Lampung.
+            </p>
+            <p class="body-md" style="color: var(--color-stone);">
+              Dihuni oleh masyarakat adat <strong>Sai Batin</strong>, bangunan panggung ini menjadi bukti keandalan rekayasa vernakular Nusantara yang terbukti utuh melewati gempa tektonik Liwa pada tahun 1994.
+            </p>
+          </div>
+
+          <!-- Real Image Card -->
+          <div class="reveal reveal-delay-2">
+            <div style="border: var(--border-thin); background: var(--color-warm-cream); padding: var(--space-3);">
+              <img src="assets/images/pesagi-balak.jpg" alt="Permukiman Adat Pesagi Balak" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;">
+              <div style="padding: var(--space-3) var(--space-2) var(--space-1);">
+                <div style="font-family: var(--font-mono); font-size: 10px; color: var(--color-stone); text-transform: uppercase; letter-spacing: 1px;">
+                  PEKON KENALI, BELALAU
+                </div>
+                <div style="font-family: var(--font-display); font-size: var(--text-base); font-weight: 600; color: var(--color-charred-teak); margin-top: 2px;">
+                  Pesagi Balak & Permukiman Adat
+                </div>
+                <div style="font-size: var(--text-xs); color: var(--color-stone); margin-top: 4px;">
+                  Pewarisan arsitektur kayu secara turun-temurun oleh tetua adat Sai Batin.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Key Numbers Counters -->
+        <div class="intro__stats reveal">
+          <div class="stat">
+            <div class="stat__number" data-target="1992">1992</div>
+            <div class="stat__label">Penetapan Cagar Budaya</div>
+          </div>
+          <div class="stat">
+            <div class="stat__number" data-target="2014">2014</div>
+            <div class="stat__label">Warisan Budaya Takbenda</div>
+          </div>
+          <div class="stat">
+            <div class="stat__number" data-target="2262" data-suffix=" m">2.262 m</div>
+            <div class="stat__label">Puncak Gunung Pesagi</div>
+          </div>
+          <div class="stat">
+            <div class="stat__number" data-target="827">827</div>
+            <div class="stat__label">Kunjungan Tahunan Terdata</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SEKSI 3: ANATOMI TIGA LAPISAN
+         ═══════════════════════════════════════════════════════ -->
+    <section class="section section--dark anatomy" id="anatomi">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-number">// 02</span>
+          <span class="overline">ARSITEKTUR VERNAKULAR</span>
+          <h2 class="h2">Anatomi Tiga Lapisan</h2>
+          <p class="body-lg" style="color: rgba(244,239,230,0.7); max-width: 680px;">
+            Pembagian struktur vertikal dengan rasio proporsi tinggi-lebar 1:2 hingga 1:6.
+          </p>
+        </div>
+
+        <!-- Tab Switcher -->
+        <div class="tabs tabs--dark reveal">
+          <button class="tab-btn is-active" data-layer="atas" role="tab" aria-selected="true">
+            Atap & Panggakh
+          </button>
+          <button class="tab-btn" data-layer="tengah" role="tab" aria-selected="false">
+            Dinding & Ruang
+          </button>
+          <button class="tab-btn" data-layer="bawah" role="tab" aria-selected="false">
+            Pondasi Panggung
+          </button>
+        </div>
+
+        <!-- Interactive Viewer Grid -->
+        <div class="anatomy__viewer reveal">
+          <!-- Architectural Blueprint SVG -->
+          <div class="anatomy__svg-wrap">
+            <svg viewBox="0 0 400 480" fill="none" xmlns="http://www.w3.org/2000/svg" class="blueprint-svg">
+              <defs>
+                <pattern id="cadGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(244, 239, 230, 0.04)" stroke-width="1"/>
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#cadGrid)" />
+
+              <!-- Elevation Height Guides -->
+              <line x1="30" y1="50" x2="30" y2="440" stroke="rgba(244,239,230,0.15)" stroke-width="1" stroke-dasharray="2,2"/>
+              <text x="24" y="130" fill="rgba(244,239,230,0.4)" font-family="var(--font-mono)" font-size="8" transform="rotate(-90 24 130)" text-anchor="middle">ATAP & PUSAKA</text>
+              <text x="24" y="270" fill="rgba(244,239,230,0.4)" font-family="var(--font-mono)" font-size="8" transform="rotate(-90 24 270)" text-anchor="middle">SESAI & HUNIAN</text>
+              <text x="24" y="390" fill="rgba(244,239,230,0.4)" font-family="var(--font-mono)" font-size="8" transform="rotate(-90 24 390)" text-anchor="middle">PANGGUNG 1-2M</text>
+
+              <!-- 1. BAGIAN ATAS -->
+              <g class="anatomy-group" data-anatomy-part="atas">
+                <path d="M 200 42 L 200 68" stroke="#C59B27" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="200" cy="40" r="4" fill="#C59B27"/>
+                <path d="M 194 52 L 206 52" stroke="#C59B27" stroke-width="2"/>
+                <text x="212" y="44" fill="#C59B27" font-family="var(--font-mono)" font-size="9">CULU LANGI</text>
+
+                <polygon points="200,68 60,195 340,195" fill="rgba(197, 155, 39, 0.2)" stroke="#C59B27" stroke-width="2"/>
+                <line x1="140" y1="130" x2="260" y2="130" stroke="rgba(244,239,230,0.25)" stroke-width="1" stroke-dasharray="3,3"/>
+                <line x1="100" y1="165" x2="300" y2="165" stroke="rgba(244,239,230,0.25)" stroke-width="1" stroke-dasharray="3,3"/>
+                
+                <rect x="130" y="160" width="140" height="30" fill="rgba(28,25,23,0.6)" stroke="#EDE5D5" stroke-width="1" stroke-dasharray="4,2"/>
+                <text x="200" y="180" fill="#EDE5D5" font-family="var(--font-mono)" font-size="9" text-anchor="middle">PANGGAKH (LOTENG)</text>
+              </g>
+
+              <!-- 2. BAGIAN TENGAH -->
+              <g class="anatomy-group" data-anatomy-part="tengah">
+                <rect x="75" y="195" width="250" height="145" fill="rgba(158, 59, 36, 0.15)" stroke="#EDE5D5" stroke-width="1.8"/>
+                
+                <line x1="75" y1="225" x2="325" y2="225" stroke="rgba(244,239,230,0.18)" stroke-width="1"/>
+                <line x1="75" y1="255" x2="325" y2="255" stroke="rgba(244,239,230,0.18)" stroke-width="1"/>
+                <line x1="75" y1="285" x2="325" y2="285" stroke="rgba(244,239,230,0.18)" stroke-width="1"/>
+                <line x1="75" y1="315" x2="325" y2="315" stroke="rgba(244,239,230,0.18)" stroke-width="1"/>
+
+                <rect x="110" y="235" width="45" height="55" fill="rgba(28,25,23,0.7)" stroke="#EDE5D5" stroke-width="1.2"/>
+                <line x1="125" y1="235" x2="125" y2="290" stroke="#EDE5D5" stroke-width="1"/>
+                <line x1="140" y1="235" x2="140" y2="290" stroke="#EDE5D5" stroke-width="1"/>
+
+                <rect x="235" y="230" width="50" height="110" fill="rgba(28,25,23,0.8)" stroke="#EDE5D5" stroke-width="1.2"/>
+                <circle cx="243" cy="285" r="2.5" fill="#C59B27"/>
+
+                <rect x="70" y="336" width="260" height="8" fill="#C59B27" stroke="#EDE5D5" stroke-width="1"/>
+                <text x="200" y="332" fill="#EDE5D5" font-family="var(--font-mono)" font-size="8" text-anchor="middle">PELUPUH BAMBU</text>
+              </g>
+
+              <!-- 3. BAGIAN BAWAH -->
+              <g class="anatomy-group" data-anatomy-part="bawah">
+                <rect x="85" y="344" width="14" height="76" fill="#8A8173" stroke="#EDE5D5" stroke-width="1.5"/>
+                <rect x="79" y="420" width="26" height="14" rx="2" fill="#3D3A36" stroke="#C59B27" stroke-width="1.2"/>
+
+                <rect x="140" y="344" width="14" height="76" fill="#8A8173" stroke="#EDE5D5" stroke-width="1.5"/>
+                <rect x="134" y="420" width="26" height="14" rx="2" fill="#3D3A36" stroke="#C59B27" stroke-width="1.2"/>
+
+                <rect x="193" y="344" width="14" height="76" fill="#8A8173" stroke="#EDE5D5" stroke-width="1.5"/>
+                <rect x="187" y="420" width="26" height="14" rx="2" fill="#3D3A36" stroke="#C59B27" stroke-width="1.2"/>
+
+                <rect x="246" y="344" width="14" height="76" fill="#8A8173" stroke="#EDE5D5" stroke-width="1.5"/>
+                <rect x="240" y="420" width="26" height="14" rx="2" fill="#3D3A36" stroke="#C59B27" stroke-width="1.2"/>
+
+                <rect x="301" y="344" width="14" height="76" fill="#8A8173" stroke="#EDE5D5" stroke-width="1.5"/>
+                <rect x="295" y="420" width="26" height="14" rx="2" fill="#3D3A36" stroke="#C59B27" stroke-width="1.2"/>
+
+                <polygon points="280,344 330,434 316,434 266,344" fill="rgba(197,155,39,0.3)" stroke="#C59B27" stroke-width="1.2"/>
+                <line x1="272" y1="365" x2="284" y2="365" stroke="#EDE5D5" stroke-width="1"/>
+                <line x1="282" y1="385" x2="294" y2="385" stroke="#EDE5D5" stroke-width="1"/>
+                <line x1="292" y1="405" x2="304" y2="405" stroke="#EDE5D5" stroke-width="1"/>
+
+                <line x1="50" y1="434" x2="350" y2="434" stroke="rgba(244,239,230,0.3)" stroke-width="1.5"/>
+                <text x="200" y="455" fill="#8A8173" font-family="var(--font-mono)" font-size="9" text-anchor="middle">UMPAK BATU ALAM (ISOLASI SEISMIK)</text>
+              </g>
+            </svg>
+          </div>
+
+          <!-- Dynamic Inspection Info -->
+          <div class="anatomy__detail">
+            <h3 class="anatomy__detail-title">Memuat data arsitektur...</h3>
+            <p class="anatomy__detail-desc">...</p>
+
+            <div class="anatomy__data-grid">
+              <!-- Rendered via JavaScript -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SEKSI 4: KONSTRUKSI TANPA PAKU
+         ═══════════════════════════════════════════════════════ -->
+    <section class="section" id="sambungan">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-number">// 03</span>
+          <span class="overline">STRUKTUR SEISMIK</span>
+          <h2 class="h2">Konstruksi Tanpa Paku</h2>
+          <p class="body-lg" style="color: var(--color-stone); max-width: 720px;">
+            Lima teknik sambungan kayu knock-down yang menyerap energi gempa bumi melalui elastisitas alami material.
+          </p>
+        </div>
+
+        <!-- 5 Joint Technique Cards -->
+        <div class="joinery__cards reveal">
+          <div class="joinery__card is-active" data-joint="tanggam-purus">
+            <div class="joinery__card-name">Tanggam-Purus</div>
+            <div class="joinery__card-sub">Mortise & Tenon</div>
+          </div>
+          <div class="joinery__card" data-joint="pasak-kayu">
+            <div class="joinery__card-name">Pasak Kayu</div>
+            <div class="joinery__card-sub">Wooden Dowel</div>
+          </div>
+          <div class="joinery__card" data-joint="jepit">
+            <div class="joinery__card-name">Sambungan Jepit</div>
+            <div class="joinery__card-sub">Clamp Joint</div>
+          </div>
+          <div class="joinery__card" data-joint="miring">
+            <div class="joinery__card-name">Sambungan Miring</div>
+            <div class="joinery__card-sub">Scarf Joint</div>
+          </div>
+          <div class="joinery__card" data-joint="ikatan">
+            <div class="joinery__card-name">Ikatan Ijuk</div>
+            <div class="joinery__card-sub">Natural Lashing</div>
+          </div>
+        </div>
+
+        <!-- Exploded View Area -->
+        <div class="joinery__display reveal">
+          <div class="joinery__svg-area">
+            <!-- Dynamically populated by joinery-explorer.js -->
+          </div>
+
+          <div class="joinery__info">
+            <h4 class="h3">Tanggam-Purus</h4>
+            <p>Memuat deskripsi teknik...</p>
+
+            <div style="margin-bottom: var(--space-4); font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-stone);">
+              POSISI STRUKTURAL: <strong class="joinery__location-val" style="color: var(--color-terracotta);">Tiang utama ke balok lantai</strong>
+            </div>
+
+            <!-- Pull-Apart Interactive Slider -->
+            <div class="joinery__slider-wrap">
+              <label for="joint-slider" class="form-label">
+                Simulasi Sambungan (Exploded View)
+              </label>
+              <input type="range" min="0" max="100" value="0" class="range-slider" id="joint-slider" aria-label="Simulasi Penguraian Sambungan Kayu">
+              <div class="joinery__slider-labels">
+                <span>Terkunci (0%)</span>
+                <span>Terurai (100%)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SEKSI 5: TATA RUANG ADAT
+         ═══════════════════════════════════════════════════════ -->
+    <section class="section" id="denah">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-number">// 04</span>
+          <span class="overline">TATA RUANG ADAT</span>
+          <h2 class="h2">Denah & Stratifikasi Ruang</h2>
+          <p class="body-lg" style="color: var(--color-stone); max-width: 720px; margin-top: var(--space-2);">
+            Enam zona privasi dan hierarki fungsi ruang masyarakat Sai Batin.
+          </p>
+        </div>
+
+        <!-- Room Selector Pills for Mobile & Fast Navigation -->
+        <div class="floorplan__pills reveal" role="tablist" aria-label="Pilih Ruangan">
+          <button type="button" class="floorplan__pill-btn is-active" data-room-target="berkumpul">Ruang Berkumpul</button>
+          <button type="button" class="floorplan__pill-btn" data-room-target="perempuan">Ruang Perempuan</button>
+          <button type="button" class="floorplan__pill-btn" data-room-target="musyawarah">Ruang Musyawarah</button>
+          <button type="button" class="floorplan__pill-btn" data-room-target="kamar">Kamar Tidur</button>
+          <button type="button" class="floorplan__pill-btn" data-room-target="makan">Ruang Makan</button>
+          <button type="button" class="floorplan__pill-btn" data-room-target="dapur">Dapur Tradisional</button>
+        </div>
+
+        <div class="floorplan__viewer reveal">
+          <!-- Floor Plan SVG Blueprint with Hotspots -->
+          <div class="floorplan__svg-area">
+            <svg viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg" class="floorplan-svg">
+              <rect x="40" y="30" width="420" height="340" fill="rgba(244,239,230,0.85)" stroke="#1C1917" stroke-width="2.5"/>
+              
+              <!-- Ruang 1: Ruang Berkumpul -->
+              <rect x="40" y="30" width="230" height="120" data-room-id="berkumpul" />
+              <text x="155" y="90" font-family="var(--font-display)" font-size="12" fill="#1C1917" text-anchor="middle" font-weight="600">RUANG BERKUMPUL</text>
+              <text x="155" y="105" font-family="var(--font-mono)" font-size="9" fill="#8A8173" text-anchor="middle">AREA SOSIAL</text>
+
+              <!-- Ruang 2: Ruang Perempuan -->
+              <rect x="270" y="30" width="190" height="120" data-room-id="perempuan" />
+              <text x="365" y="90" font-family="var(--font-display)" font-size="12" fill="#1C1917" text-anchor="middle" font-weight="600">RUANG PEREMPUAN</text>
+              <text x="365" y="105" font-family="var(--font-mono)" font-size="9" fill="#8A8173" text-anchor="middle">ZONA TERPROTEKSI</text>
+
+              <!-- Ruang 3: Ruang Musyawarah -->
+              <rect x="40" y="150" width="230" height="110" data-room-id="musyawarah" />
+              <text x="155" y="205" font-family="var(--font-display)" font-size="12" fill="#1C1917" text-anchor="middle" font-weight="600">RUANG MUSYAWARAH</text>
+              <text x="155" y="220" font-family="var(--font-mono)" font-size="9" fill="#8A8173" text-anchor="middle">TETUA SAIBATIN</text>
+
+              <!-- Ruang 4: Kamar Tidur -->
+              <rect x="270" y="150" width="190" height="110" data-room-id="kamar" />
+              <text x="365" y="205" font-family="var(--font-display)" font-size="12" fill="#1C1917" text-anchor="middle" font-weight="600">KAMAR TIDUR</text>
+              <text x="365" y="220" font-family="var(--font-mono)" font-size="9" fill="#8A8173" text-anchor="middle">ZONA PRIVAT</text>
+
+              <!-- Ruang 5: Ruang Makan -->
+              <rect x="40" y="260" width="230" height="110" data-room-id="makan" />
+              <text x="155" y="315" font-family="var(--font-display)" font-size="12" fill="#1C1917" text-anchor="middle" font-weight="600">RUANG MAKAN</text>
+              <text x="155" y="330" font-family="var(--font-mono)" font-size="9" fill="#8A8173" text-anchor="middle">KONEKSI DAPUR</text>
+
+              <!-- Ruang 6: Dapur -->
+              <rect x="270" y="260" width="190" height="110" data-room-id="dapur" />
+              <text x="365" y="315" font-family="var(--font-display)" font-size="12" fill="#1C1917" text-anchor="middle" font-weight="600">DAPUR TRADISIONAL</text>
+              <text x="365" y="330" font-family="var(--font-mono)" font-size="9" fill="#8A8173" text-anchor="middle">TUNGKU PERAPIAN</text>
+
+              <!-- Tangga Akses -->
+              <polygon points="130,22 180,22 170,30 140,30" fill="#9E3B24" />
+              <text x="155" y="18" font-family="var(--font-mono)" font-size="8" fill="#9E3B24" text-anchor="middle">IJAN GELADAK</text>
+            </svg>
+
+            <!-- Hotspots -->
+            <div class="hotspot" style="top: 22%; left: 32%;" data-target-room="berkumpul" title="Ruang Berkumpul">
+              <div class="hotspot__pulse"></div>
+              <div class="hotspot__dot"></div>
+            </div>
+            <div class="hotspot" style="top: 22%; left: 74%;" data-target-room="perempuan" title="Ruang Perempuan">
+              <div class="hotspot__pulse"></div>
+              <div class="hotspot__dot"></div>
+            </div>
+            <div class="hotspot" style="top: 50%; left: 32%;" data-target-room="musyawarah" title="Ruang Musyawarah">
+              <div class="hotspot__pulse"></div>
+              <div class="hotspot__dot"></div>
+            </div>
+            <div class="hotspot" style="top: 50%; left: 74%;" data-target-room="kamar" title="Kamar Tidur">
+              <div class="hotspot__pulse"></div>
+              <div class="hotspot__dot"></div>
+            </div>
+            <div class="hotspot" style="top: 76%; left: 32%;" data-target-room="makan" title="Ruang Makan">
+              <div class="hotspot__pulse"></div>
+              <div class="hotspot__dot"></div>
+            </div>
+            <div class="hotspot" style="top: 76%; left: 74%;" data-target-room="dapur" title="Dapur">
+              <div class="hotspot__pulse"></div>
+              <div class="hotspot__dot"></div>
+            </div>
+          </div>
+
+          <!-- Sidebar Room Explanation -->
+          <div class="floorplan__sidebar">
+            <h4 class="h4">Fungsi & Nilai Ruang</h4>
+            <p>
+              Pilih ruangan pada denah untuk melihat fungsi sosial dan batasan adat yang berlaku.
+            </p>
+
+            <div class="floorplan__room-info">
+              <div class="floorplan__room-name">Ruang Berkumpul</div>
+              <div class="floorplan__room-desc">
+                Area depan rumah panggung untuk menerima tamu dan musyawarah keluarga besar masyarakat Sai Batin.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Artifact Cards -->
+        <div class="floorplan__artifacts reveal">
+          <h3 class="floorplan__artifacts-title h3">Artefak Tradisional Pendukung</h3>
+          <div class="grid-4">
+            <div class="card">
+              <div class="card__num">01</div>
+              <div class="card__title">Lumbung Padi</div>
+              <div class="card__body">
+                Struktur terpisah di pekarangan rumah untuk menyimpan persediaan panen padi masyarakat agraris.
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__num">02</div>
+              <div class="card__title">Ijan Geladak</div>
+              <div class="card__body">
+                Tangga kayu berundak tradisional sebagai akses penghubung antara tanah dan serambi rumah panggung.
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__num">03</div>
+              <div class="card__title">Iseran</div>
+              <div class="card__body">
+                Wadah penyimpanan tradisional berbahan alam untuk mengamankan hasil bumi dan komoditas rempah.
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__num">04</div>
+              <div class="card__title">Girjoh</div>
+              <div class="card__body">
+                Perangkat kayu tradisional pengolah bahan pangan lokal dalam aktivitas keseharian warga pekon.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SEKSI 6: KAWASAN SEKITAR & LOKASI
+         ═══════════════════════════════════════════════════════ -->
+    <section class="section section--dark ecosystem" id="ekosistem">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-number">// 05</span>
+          <span class="overline">LANSKAP & LOKASI</span>
+          <h2 class="h2">Kawasan Sekitar & Aksesibilitas</h2>
+          <p class="body-lg" style="color: rgba(244,239,230,0.7); max-width: 680px;">
+            Lanskap pegunungan dan jalur transportasi menuju Pekon Kenali.
+          </p>
+        </div>
+
+        <div class="ecosystem__grid reveal">
+          <!-- Real Photo & Geospatial Details -->
+          <div style="border: 1px solid rgba(244,239,230,0.15); background: rgba(28,25,23,0.6); overflow: hidden;">
+            <img src="assets/images/gunung-pesagi.jpg" alt="Pemandangan Puncak Gunung Pesagi 2.262 mdpl" style="width: 100%; aspect-ratio: 16/10; object-fit: cover;">
+            <div style="padding: var(--space-5);">
+              <div style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-brass-light); margin-bottom: var(--space-2);">
+                PANORAMA GUNUNG PESAGI (2.262 MDPL)
+              </div>
+              <div style="font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-parchment); margin-bottom: var(--space-2);">
+                Atap Tertinggi Lampung
+              </div>
+              <p style="font-size: var(--text-sm); color: rgba(244,239,230,0.7); line-height: 1.6;">
+                Hulu peradaban Kerajaan Sekala Brak kuno dan titik asal silsilah masyarakat Lampung dengan sumber mata air di lereng atas.
+              </p>
+              
+              <div style="margin-top: var(--space-4); padding-top: var(--space-3); border-top: 1px solid rgba(244,239,230,0.1); font-family: var(--font-mono); font-size: 11px; color: var(--color-stone-light);">
+                KOORDINAT 5°04'05"S 104°08'53"E / KECAMATAN BELALAU
+              </div>
+            </div>
+          </div>
+
+          <!-- Travel & Access Info -->
+          <div class="ecosystem__info-list">
+            <div class="ecosystem__item">
+              <div class="ecosystem__item-label">Rute Perjalanan</div>
+              <div class="ecosystem__item-value">5 hingga 6 Jam dari Bandar Lampung</div>
+              <div class="ecosystem__item-desc">
+                Melalui Jalan Lintas Barat Sumatera menuju Liwa, dilanjutkan perjalanan darat sekitar 20 menit menuju Pekon Kenali.
+              </div>
+            </div>
+
+            <div class="ecosystem__item">
+              <div class="ecosystem__item-label">Kondisi Jalan</div>
+              <div class="ecosystem__item-value">Jalan Beraspal Pegunungan</div>
+              <div class="ecosystem__item-desc">
+                Dapat dilalui kendaraan roda dua maupun roda empat, melintasi perkebunan kopi robusta dan hutan lindung Bukit Barisan.
+              </div>
+            </div>
+
+            <div class="ecosystem__item">
+              <div class="ecosystem__item-label">Pengelola</div>
+              <div class="ecosystem__item-value">Pokdarwis Pekon Kenali</div>
+              <div class="ecosystem__item-desc">
+                Dikelola oleh Kelompok Sadar Wisata masyarakat adat setempat bersama Dinas Pariwisata Kabupaten Lampung Barat.
+              </div>
+            </div>
+
+            <div class="ecosystem__item">
+              <div class="ecosystem__item-label">Destinasi Terdekat</div>
+              <div class="ecosystem__item-value">Air Terjun Kiwis Raya & Desa Adat</div>
+              <div class="ecosystem__item-desc">
+                Wisatawan dapat melanjutkan penjelajahan alam ke air terjun di lereng bukit dalam jarak beberapa kilometer.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SEKSI 6: PROTOKOL ADAT & PANDUAN LAPANGAN
+         ═══════════════════════════════════════════════════════ -->
+    <section class="section" id="panduan">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-number">// 06</span>
+          <span class="overline">ETIKA ADAT & PANDUAN LAPANGAN</span>
+          <h2 class="h2">Tata Krama Bertamu & Direktori Kunjungan</h2>
+          <p class="body-lg" style="color: var(--color-stone); max-width: 720px;">
+            Protokol adat Sai Batin dan petunjuk praktis untuk kunjungan penelitian, studi arsitektur, maupun pelancong budaya.
+          </p>
+        </div>
+
+        <!-- 4 Cultural Protocols (Interactive Cards) -->
+        <div class="protocol-grid reveal">
+          <div class="protocol-card is-expanded">
+            <div class="protocol-card__code">PROTOKOL 01</div>
+            <div class="protocol-card__title">Adab Melapor & Sapaan Adat</div>
+            <div class="protocol-card__summary">
+              Sebelum memasuki pekarangan situs, pengunjung dianjurkan melapor terlebih dahulu ke Balai Pekon atau sekretariat Pokdarwis Pekon Kenali sebagai bentuk penghormatan kepada tetua adat Sai Batin.
+            </div>
+            <div class="protocol-card__points">
+              <div class="protocol-card__point">Sampaikan salam santun dan maksud tujuan kunjungan secara terbuka</div>
+              <div class="protocol-card__point">Kenakan pakaian berlengan dan bawahan panjang yang sopan</div>
+              <div class="protocol-card__point">Tunggu arahan pemandu adat sebelum menaiki tangga Ijan Geladak</div>
+            </div>
+          </div>
+
+          <div class="protocol-card">
+            <div class="protocol-card__code">PROTOKOL 02</div>
+            <div class="protocol-card__title">Hierarki & Batasan Ruang</div>
+            <div class="protocol-card__summary">
+              Denah Lamban Pesagi memiliki pembagian ruang yang tegas antara area interaksi publik dan zona sakral privat keluarga.
+            </div>
+            <div class="protocol-card__points">
+              <div class="protocol-card__point">Ruang depan (Ruang Berkumpul) terbuka untuk observasi dan dialog</div>
+              <div class="protocol-card__point">Dilarang masuk ke Kamar Tidur dan Ruang Perempuan tanpa izin tuan rumah</div>
+              <div class="protocol-card__point">Hormati area musyawarah Saibatin saat musyawarah adat berlangsung</div>
+            </div>
+          </div>
+
+          <div class="protocol-card">
+            <div class="protocol-card__code">PROTOKOL 03</div>
+            <div class="protocol-card__title">Preservasi Struktur Kayu</div>
+            <div class="protocol-card__summary">
+              Kayu Lamban Pesagi berusia ratusan tahun dan tidak dilindungi paku modern, sehingga memerlukan kehati-hatian gerak.
+            </div>
+            <div class="protocol-card__points">
+              <div class="protocol-card__point">Wajib melepaskan alas kaki sebelum melangkah di atas pelupuh bambu</div>
+              <div class="protocol-card__point">Hindari bersandar dengan beban berlebih pada jeruji kayu jendela</div>
+              <div class="protocol-card__point">Pantangan mutlak: tidak merokok, tidak menyalakan api, dan bawa pulang sampah</div>
+            </div>
+          </div>
+
+          <div class="protocol-card">
+            <div class="protocol-card__code">PROTOKOL 04</div>
+            <div class="protocol-card__title">Etika Dokumentasi & Fotografi</div>
+            <div class="protocol-card__summary">
+              Dokumentasi diperbolehkan untuk kepentingan riset dan edukasi dengan tetap menjunjung etika privasi penghuni.
+            </div>
+            <div class="protocol-card__points">
+              <div class="protocol-card__point">Minta izin secara santun sebelum memotret tetua adat atau penghuni rumah</div>
+              <div class="protocol-card__point">Hindari penggunaan lampu kilat (flash) berlebih pada ukiran kayu tua</div>
+              <div class="protocol-card__point">Benda pusaka di loteng Panggakh tidak untuk dipublikasikan sembarangan</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Field Guide & Directory -->
+        <div class="field-guide reveal">
+          <!-- Left: Best Time to Visit -->
+          <div class="field-guide__block">
+            <h3 class="field-guide__title">Waktu Terbaik Kunjungan</h3>
+            
+            <div class="field-guide__card">
+              <div class="field-guide__card-title">Musim Panen Kopi (Mei – Agustus)</div>
+              <div class="field-guide__card-desc">
+                Waktu paling hidup di Pekon Kenali. Aktivitas warga menjemur biji kopi robusta di pelataran rumah adat dan semerbak aroma sangrai tradisional khas dataran tinggi Belalau.
+              </div>
+            </div>
+
+            <div class="field-guide__card">
+              <div class="field-guide__card-title">Pagi Hari Berkabut (06.30 – 09.00 WIB)</div>
+              <div class="field-guide__card-desc">
+                Momen visual terbaik saat kabut pegunungan Gunung Pesagi perlahan tersibak sinar matahari, memperlihatkan siluet tajug Lamban Pesagi dengan pencahayaan alami yang indah.
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Direct Contact & Directory -->
+          <div class="field-guide__block">
+            <h3 class="field-guide__title">Direktori Kontak & Sekretariat</h3>
+            
+            <div class="directory-box">
+              <div>
+                <div class="directory-item__label">Lokasi Situs & Kesekretariatan</div>
+                <div class="directory-item__val">Pekon Kenali, Kecamatan Belalau, Kabupaten Lampung Barat</div>
+              </div>
+
+              <div>
+                <div class="directory-item__label">Pengelola Lapangan</div>
+                <div class="directory-item__val">Kelompok Sadar Wisata (Pokdarwis) Pekon Kenali & Pemangku Adat Sai Batin</div>
+              </div>
+
+              <div>
+                <div class="directory-item__label">Instansi Pembina</div>
+                <div class="directory-item__val">Dinas Kepemudaan, Olahraga dan Pariwisata Kabupaten Lampung Barat</div>
+              </div>
+
+              <div class="directory-actions">
+                <a href="https://maps.google.com/?q=-5.068056,104.148056" target="_blank" rel="noopener noreferrer" class="btn btn--outline directory-btn">
+                  Buka Google Maps ↗
+                </a>
+                <a href="https://wa.me/6285269781234?text=Halo%20Pokdarwis%20Pekon%20Kenali,%20saya%20ingin%20bertanya%20mengenai%20kunjungan%20ke%20Lamban%20Pesagi" target="_blank" rel="noopener noreferrer" class="btn btn--outline directory-btn">
+                  WhatsApp Pokdarwis ↗
+                </a>
+                <button type="button" class="btn btn--outline directory-btn" id="btn-copy-address">
+                  Salin Alamat Lengkap
+                </button>
+                <span id="copy-status" style="font-family: var(--font-mono); font-size: 10px; color: var(--color-brass-light); opacity: 0; transition: opacity 0.3s ease; width: 100%; text-align: center;">
+                  ALAMAT DISALIN KE PAPAN KLIP
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">
+            LAMBAN<span>PESAGI</span>
+          </div>
+          <p class="footer__brand-sub">
+            Dokumentasi dan preservasi digital arsitektur vernakular Lamban Pesagi di Pekon Kenali, Belalau, Lampung Barat.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer__heading">Navigasi</div>
+          <a href="#hero" class="footer__link">Beranda</a>
+          <a href="#sejarah" class="footer__link">Sejarah & Identitas</a>
+          <a href="#anatomi" class="footer__link">Anatomi Tiga Lapisan</a>
+          <a href="#sambungan" class="footer__link">Konstruksi Kayu</a>
+          <a href="#denah" class="footer__link">Tata Ruang Adat</a>
+          <a href="#ekosistem" class="footer__link">Kawasan Sekitar</a>
+          <a href="#panduan" class="footer__link">Panduan Kunjungan</a>
+        </div>
+
+        <div>
+          <div class="footer__heading">Sitasi Literatur</div>
+          <div style="font-size: 11px; color: rgba(244,239,230,0.5); line-height: 1.8; font-family: var(--font-mono);">
+            <div>Harsono, T. D. (2017)</div>
+            <div>Atthaya, A. N. et al. (2022)</div>
+            <div>Ibnu, I. M. (2018)</div>
+            <div>Kustiani, K. et al. (2023)</div>
+            <div>Lestari, S. et al. (2025)</div>
+            <div>SK WBTb Kemendikbud 270/P/2014</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__copyright">
+          © 2026 Lamban Pesagi. Cagar Budaya RI No. 5/1992 & WBTb No. 270/P/2014.
+        </div>
+        <div class="footer__credits">
+          Foto hero oleh Sandhi Irawan / Wikimedia Commons (CC BY-SA 4.0).
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main Script -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

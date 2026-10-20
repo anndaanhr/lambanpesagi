@@ -1,0 +1,9 @@
+# Dependencies & OS files
+.DS_Store
+Thumbs.db
+*.log
+
+# Source analysis and extraction scripts
+MAKALAH SUSI KEPARIWISATAAN.docx
+makalah_content.txt
+extract.ps1
