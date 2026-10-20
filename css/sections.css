@@ -15,6 +15,7 @@
   padding: var(--space-12) 0 var(--space-10);
   overflow: hidden;
   border-bottom: none;
+  background-color: var(--color-charred-teak);
 }
 
 .hero__bg {
@@ -27,19 +28,25 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 40%;
+  object-position: center 35%;
 }
 
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(20, 23, 22, 0.94) 0%,
-    rgba(20, 23, 22, 0.65) 45%,
-    rgba(20, 23, 22, 0.3) 75%,
-    rgba(20, 23, 22, 0.15) 100%
-  );
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(20, 23, 22, 0.45) 0%,
+      transparent 22%
+    ),
+    linear-gradient(
+      to top,
+      rgba(20, 23, 22, 0.95) 0%,
+      rgba(20, 23, 22, 0.65) 45%,
+      rgba(20, 23, 22, 0.3) 75%,
+      rgba(20, 23, 22, 0.15) 100%
+    );
 }
 
 .hero__content {
