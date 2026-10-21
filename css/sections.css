@@ -678,9 +678,10 @@
 
 .footer__grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 1.3fr 1fr 1.2fr;
   gap: var(--space-8);
   margin-bottom: var(--space-8);
+  align-items: start;
 }
 
 .footer__brand {
@@ -693,9 +694,30 @@
 
 .footer__brand-sub {
   font-size: var(--text-sm);
-  color: rgba(244, 239, 230, 0.5);
+  color: rgba(244, 239, 230, 0.6);
   line-height: var(--leading-relaxed);
-  max-width: 360px;
+  max-width: 400px;
+}
+
+.footer__nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.footer__link-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: rgba(244, 239, 230, 0.55);
+  text-decoration: none;
+  letter-spacing: var(--tracking-wide);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.footer__link-tag:hover {
+  color: var(--color-parchment);
+  text-decoration: underline;
 }
 
 .footer__heading {
@@ -705,7 +727,85 @@
   color: var(--color-stone-light);
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-3);
+}
+
+.footer__card,
+.footer__academic-block {
+  background: rgba(244, 239, 230, 0.04);
+  border: 1px solid rgba(244, 239, 230, 0.1);
+  padding: var(--space-4);
+  border-radius: var(--radius-sm);
+}
+
+.footer__author-name {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-parchment);
+  margin-bottom: 2px;
+}
+
+.footer__author-npm {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-brass-light);
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-2);
+}
+
+.footer__author-inst {
+  font-size: var(--text-xs);
+  color: rgba(244, 239, 230, 0.7);
+  line-height: 1.6;
+}
+
+.footer__author-inst strong {
+  color: var(--color-parchment);
+  font-weight: 600;
+}
+
+.footer__subheading {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--color-stone-light);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 2px;
+}
+
+.footer__course-name {
+  font-size: var(--text-xs);
+  color: var(--color-parchment);
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.footer__course-name em {
+  font-style: italic;
+  color: rgba(244, 239, 230, 0.8);
+}
+
+.footer__lecturers {
+  list-style: none;
+  font-size: var(--text-xs);
+  color: rgba(244, 239, 230, 0.75);
+  line-height: 1.6;
+  margin-top: 4px;
+  padding-left: 0;
+}
+
+.footer__lecturers li {
+  position: relative;
+  padding-left: 12px;
+  margin-bottom: 3px;
+}
+
+.footer__lecturers li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--color-terracotta);
 }
 
 .footer__link {
